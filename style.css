@@ -91,21 +91,49 @@ main {
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
-    background-color: #0891B2;
+    grid-template-rows: auto auto;
+    overflow: scroll;
+    background-color: #1ed57a;
 }
 
 article {
-    min-height: 50vh;
-    width: 100vw;
-    position: absolute;
+    height: 400px;
+    width: 350px;
+    margin: 50px;
+    padding: 10px;
+    box-shadow: 5px 5px 6px -2px rgb(103, 100, 100);
+    border-radius: 5px;
     background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 article img {
-    width: 100px;
-    height: 100px;
+    width: 350px;
+    height: 250px;
     object-fit: cover;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.project-info {
+    margin-top: 5px;
+    padding: 10px;
+    position: relative;
+
+}
+
+.project-info h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.project-info a {
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    top: auto;
+    right: 10px;
 }
 
 footer {
