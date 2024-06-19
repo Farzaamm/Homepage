@@ -3,10 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-body {
-    position: relative;
-    min-height: 100vh;
+html, body {
     margin: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -86,13 +92,11 @@ header {
 
 
 main {
-    min-height: 100vh;
     width: 100vw;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
-    overflow: scroll;
     background-color: #1ed57a;
 }
 
@@ -137,9 +141,7 @@ article img {
 }
 
 footer {
-    min-height: 200px;
     width: 100vw;
     background-color: #0891B2;
-    position: absolute;
-    bottom: 0;
+    color: white;
 }
