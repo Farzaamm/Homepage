@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 
 html, body {
     margin: 0;
@@ -92,21 +96,23 @@ header {
 
 
 main {
-    width: 100vw;
+    width: 100%;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    justify-items: center;
     background-color: #1ed57a;
 }
 
 article {
-    height: 400px;
-    width: 350px;
-    margin: 50px;
+    height: 90%;
+    width: 90%;
     padding: 10px;
     box-shadow: 5px 5px 6px -2px rgb(103, 100, 100);
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: antiquewhite;
     display: flex;
     flex-direction: column;
@@ -114,8 +120,8 @@ article {
 }
 
 article img {
-    width: 350px;
-    height: 250px;
+    width: 100%;
+    height: 50%;
     object-fit: cover;
     border-radius: 5px 5px 0px 0px;
 }
@@ -144,4 +150,82 @@ footer {
     width: 100vw;
     background-color: #0891B2;
     color: white;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+
+footer h2 {
+    font-size: 42px;
+    font-style: italic;
+
+}
+
+.footer-social {
+    font-size: 2em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-social a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 10px 0px 0px;
+}
+
+footer img {
+    width: 20%;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.acknowledgement {
+    padding: auto;
+    font-style: italic;
+    font-family: cursive;
+    font-size: small;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        padding: 5px;
+    }
+
+    footer img {
+        width: 80%;
+        object-fit: cover;
+        margin: 10px;
+    }
+
+    .acknowledgement {
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
 }
