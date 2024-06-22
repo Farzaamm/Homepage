@@ -124,22 +124,17 @@ article {
     flex-direction: column;
     cursor: pointer;
     position: relative;
-    animation: grow 1s ease-in-out infinite;
+    animation: fade-in 2s ease-in 1;
     
 }
 
-@keyframes grow {
-    0% {
-        height: 90%;
-        width: 90%;
+@keyframes fade-in {
+    from {
+        opacity: 0;
     }
-    50% {
-        height: 95%;
-        width: 95%;
-    }
-    100% {
-        height: 90%;
-        width: 90%;
+
+    to {
+        opacity: 1;
     }
 }
 
