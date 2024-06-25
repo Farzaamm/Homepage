@@ -95,6 +95,12 @@ header {
     padding: 10px;
 }
 
+.social-media-container a:hover {
+    color: #0891B2;
+    transform: scale(1.5) rotate(360deg);
+    transition-duration: 1s;
+}
+
 
 main {
     margin: 10px auto;
@@ -115,7 +121,20 @@ article {
     background-color: antiquewhite;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     position: relative;
+    animation: fade-in 2s ease-in 1;
+    
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 article img {
