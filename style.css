@@ -110,16 +110,20 @@ main {
     grid-template-rows: auto auto;
     grid-gap: 10px;
     padding: 10px;
+    min-height: 100vh;
 }
 
 article {
     height: 90%;
+    max-height: 500px;
     width: 90%;
     padding: 10px;
     box-shadow: 5px 5px 6px -2px rgb(103, 100, 100);
     border-radius: 10px;
     background-color: antiquewhite;
     display: flex;
+    justify-self: center;
+    align-self: center;
     flex-direction: column;
     cursor: pointer;
     position: relative;
@@ -171,6 +175,8 @@ footer {
     padding: .5em;
     display: flex;
     flex-direction: column;
+    /* position: absolute;
+    bottom: 0; */
 }
 
 .footer-container {
@@ -214,6 +220,11 @@ footer img {
     text-align: center;
 }
 
+@media screen and (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 @media screen and (max-width: 600px) {
 
@@ -244,8 +255,3 @@ footer img {
     
 }
 
-@media screen and (max-width: 900px) {
-    main {
-        grid-template-columns: 1fr 1fr;
-    }
-}
